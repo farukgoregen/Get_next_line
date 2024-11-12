@@ -6,13 +6,11 @@
 /*   By: omgorege <omgorege@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 10:59:58 by omgorege          #+#    #+#             */
-/*   Updated: 2024/11/03 15:43:38 by omgorege         ###   ########.fr       */
+/*   Updated: 2024/11/04 17:02:00 by omgorege         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
-#include <fcntl.h>
-#include <stdio.h>
 
 char	*ft_bufferstr(int fd, char *str)
 {
@@ -43,6 +41,7 @@ char	*get_next_line(int fd)
 {
 	static char	*str;
 	char		*ptr;
+
 	if (fd < 0 && BUFFER_SIZE < 1)
 		return (NULL);
 	str = ft_bufferstr(fd, str);
